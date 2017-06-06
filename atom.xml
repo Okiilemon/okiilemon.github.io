@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-24T14:55:23.000Z</updated>
+  <updated>2017-06-06T06:41:50.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,14 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>博客重新开张</title>
+    <link href="http://yoursite.com/2017/06/06/flag/"/>
+    <id>http://yoursite.com/2017/06/06/flag/</id>
+    <published>2017-06-06T06:21:28.000Z</published>
+    <updated>2017-06-06T06:41:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。<br>希望这篇文章不会成为 flag 😶<br><img src="http://s3.mogucdn.com/mlcdn/c45406/170606_0a2akh4ak28bi240gicl0edhgffjf_5616x2905.jpg" alt="image"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。&lt;br&gt;希望这篇文章不会成为 flag 😶&lt;br&gt;&lt;img src=&quot;http://s3.mogucdn.com/
+    
+    </summary>
+    
+    
+      <category term="other" scheme="http://yoursite.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
     <title>__proto__（隐式原型）与prototype（显式原型）</title>
     <link href="http://yoursite.com/2015/08/13/prototype/"/>
     <id>http://yoursite.com/2015/08/13/prototype/</id>
     <published>2015-08-13T03:58:57.000Z</published>
-    <updated>2017-05-24T14:55:23.000Z</updated>
+    <updated>2017-06-06T06:09:14.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-是什么"><a href="#1-是什么" class="headerlink" title="1. 是什么"></a><strong>1. 是什么</strong></h3><ul>
-<li><p>显式原型 explicit prototype property：每一个<strong>函数</strong>在创建之后都会拥有一个名为<strong>prototype</strong>的属性，这个属性指向函数的原型对象。<br>Note：通过Function.prototype.bind方法构造出来的函数是个例外，它没有prototype属性。</p>
+<li><p>显式原型 explicit prototype property：每一个<strong>函数</strong>在创建之后都会拥有一个名为<strong>prototype</strong>的属性，这个属性指向函数的原型对象。</p>
+<a id="more"></a>
+<p>Note：通过Function.prototype.bind方法构造出来的函数是个例外，它没有prototype属性。</p>
 <blockquote>
 <p>NOTE Function objects created using Function.prototype.bind do not have a prototype property or the [[Code]], [[FormalParameters]], and [[Scope]] internal properties. ”—– <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.5" target="_blank" rel="external">ECMA262 15.3.4.5</a></p>
 </blockquote>
@@ -32,7 +55,6 @@
 </li>
 <li>二者的关系：隐式原型指向<strong>创建</strong>这个对象的函数(constructor)的prototype</li>
 </ul>
-<a id="more"></a>
 <p>#</p>
 <h2 id="2-作用是什么"><a href="#2-作用是什么" class="headerlink" title="2. 作用是什么"></a><strong>2. 作用是什么</strong></h2><ul>
 <li><p>显式原型的作用：用来实现基于原型的继承与属性的共享。</p>
@@ -80,15 +102,7 @@
     <summary type="html">
     
       &lt;h3 id=&quot;1-是什么&quot;&gt;&lt;a href=&quot;#1-是什么&quot; class=&quot;headerlink&quot; title=&quot;1. 是什么&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 是什么&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;显式原型 explicit prototype property：每一个&lt;strong&gt;函数&lt;/strong&gt;在创建之后都会拥有一个名为&lt;strong&gt;prototype&lt;/strong&gt;的属性，这个属性指向函数的原型对象。&lt;br&gt;Note：通过Function.prototype.bind方法构造出来的函数是个例外，它没有prototype属性。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE Function objects created using Function.prototype.bind do not have a prototype property or the [[Code]], [[FormalParameters]], and [[Scope]] internal properties. ”—– &lt;a href=&quot;http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.5&quot;&gt;ECMA262 15.3.4.5&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;隐式原型 implicit prototype link：JavaScript中任意对象都有一个内置属性[[prototype]]，在ES5之前没有标准的方法访问这个内置属性，但是大多数浏览器都支持通过&lt;strong&gt;proto&lt;/strong&gt;来访问。ES5中有了对于这个内置属性标准的Get方法Object.getPrototypeOf().Note: Object.prototype 这个对象是个例外，它的&lt;strong&gt;proto&lt;/strong&gt;值为null&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;二者的关系：隐式原型指向&lt;strong&gt;创建&lt;/strong&gt;这个对象的函数(constructor)的prototype&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;显式原型 explicit prototype property：每一个&lt;strong&gt;函数&lt;/strong&gt;在创建之后都会拥有一个名为&lt;strong&gt;prototype&lt;/strong&gt;的属性，这个属性指向函数的原型对象。&lt;/p&gt;
     
     </summary>
     
@@ -102,11 +116,11 @@
     <link href="http://yoursite.com/2015/03/19/javascript-the-core-ec-ecs-ao-vo/"/>
     <id>http://yoursite.com/2015/03/19/javascript-the-core-ec-ecs-ao-vo/</id>
     <published>2015-03-18T23:39:25.000Z</published>
-    <updated>2017-06-06T03:57:10.000Z</updated>
+    <updated>2017-06-06T06:08:47.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p><span class="s1">之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。</span></p>
-<p><span class="s1">注：Execution Context 可以被翻译为「执行上下文」或者「 执行环境」，文中可能都会用到，大家记住是一个东西就可以了。</span></p>
 <a id="more"></a>
+<p><span class="s1">注：Execution Context 可以被翻译为「执行上下文」或者「 执行环境」，文中可能都会用到，大家记住是一个东西就可以了。</span></p>
 <h2 id="什么是执行环境（Execution-Context）？"><a href="#什么是执行环境（Execution-Context）？" class="headerlink" title="什么是执行环境（Execution Context）？"></a><strong>什么是执行环境（Execution Context）？</strong></h2><p><em>“每当程序的执行流进入到一个可执行的代码时，就进入到了一个<strong>执行环境</strong>中。”</em></p>
 <p>执行环境是 ECMA-262 中用以区分不同的可执行代码的抽象概念<br>可执行代码的类型可以为分为：</p>
 <ul>
@@ -186,7 +200,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;span class=&quot;s1&quot;&gt;之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;s1&quot;&gt;注：Execution Context 可以被翻译为「执行上下文」或者「 执行环境」，文中可能都会用到，大家记住是一个东西就可以了。&lt;/span&gt;&lt;/p&gt;
     
     </summary>
     
@@ -200,23 +213,23 @@
     <link href="http://yoursite.com/2014/12/19/call-by-sharing/"/>
     <id>http://yoursite.com/2014/12/19/call-by-sharing/</id>
     <published>2014-12-19T05:11:50.000Z</published>
-    <updated>2017-06-06T03:29:11.000Z</updated>
+    <updated>2017-06-06T06:08:26.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>在 JavaScript 中数据类型可以分为两类：</p>
 <ul>
 <li><strong>原始数据类型值</strong> primitive type，比如 Undefined, Null, Boolean, Number, String。</li>
 <li><strong>引用类型值</strong>，也就是对象类型 Object type，比如 Object, Array, Function, Date 等。</li>
 </ul>
+<a id="more"></a>
 <h3 id="声明变量时不同的内存分配"><a href="#声明变量时不同的内存分配" class="headerlink" title="声明变量时不同的内存分配"></a>声明变量时不同的内存分配</h3><ul>
 <li>原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在<strong>变量访问的位置</strong>。这是因为这些原始类型占据的空间是固定的，所以可将他们存储在较小的内存区域 - 栈中。这样存储便于迅速查寻变量的值。</li>
 <li>引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存地址。这是因为：引用值的大小会改变，所以不能把它放在栈中，否则会降低变量查寻的速度。相反，放在变量的栈空间中的值是该对象存储在堆中的地址。地址的大小是固定的，所以把它存储在栈中对变量性能无任何负面影响。</li>
 </ul>
-<a id="more"></a>
 <h3 id="不同的内存分配机制也带来了不同的访问机制"><a href="#不同的内存分配机制也带来了不同的访问机制" class="headerlink" title="不同的内存分配机制也带来了不同的访问机制"></a>不同的内存分配机制也带来了不同的访问机制</h3><p>在javascript中是不允许直接访问保存在堆内存中的对象的，所以在访问一个对象时，首先得到的是这个对象在堆内存中的地址，然后再按照这个地址去获得这个对象中的值，这就是传说中的<strong>按引用访问</strong>。而原始类型的值则是可以直接访问到的。</p>
 <h3 id="复制变量时的不同"><a href="#复制变量时的不同" class="headerlink" title="复制变量时的不同"></a>复制变量时的不同</h3><ul>
 <li><p>原始值：在将一个保存着原始值的变量复制给另一个变量时，会将原始值的副本赋值给新变量，此后这两个变量是完全独立的，他们只是拥有相同的value而已。</p>
 </li>
-<li><p>引用值：在将一个保存着对象内存地址的变量复制给另一个变量时，会把这个内存地址赋值给新变量，也就是说这两个变量都指向了堆内存中的同一个对象，他们中任何一个作出的改变都会反映在另一个身上。（这里要理解的一点就是，复制对象时并不会在堆内存中新生成一个一模一样的对象，只是多了一个保存指向这个对象指针的变量罢了）<br>&nbsp;</p>
+<li><p>引用值：在将一个保存着对象内存地址的变量复制给另一个变量时，会把这个内存地址赋值给新变量，也就是说这两个变量都指向了堆内存中的同一个对象，他们中任何一个作出的改变都会反映在另一个身上。（这里要理解的一点就是，复制对象时并不会在堆内存中新生成一个一模一样的对象，只是多了一个保存指向这个对象指针的变量罢了）</p>
 </li>
 </ul>
 <h3 id="参数传递的不同"><a href="#参数传递的不同" class="headerlink" title="参数传递的不同"></a>参数传递的不同</h3><p>首先我们应该明确一点：ECMAScript中所有函数的参数都<strong>是按值来传递</strong>的。但是为什么涉及到原始类型与引用类型的值时仍然有区别呢，还不就是因为内存分配时的差别。 （我对比了一下，这里和复制变量时遵循的机制完全一样的嘛，你可以简单地理解为传递参数的时候，就是把实参复制给形参的过程）</p>
@@ -242,10 +255,6 @@
 &lt;li&gt;&lt;strong&gt;原始数据类型值&lt;/strong&gt; primitive type，比如 Undefined, Null, Boolean, Number, String。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;引用类型值&lt;/strong&gt;，也就是对象类型 Object type，比如 Object, Array, Function, Date 等。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;声明变量时不同的内存分配&quot;&gt;&lt;a href=&quot;#声明变量时不同的内存分配&quot; class=&quot;headerlink&quot; title=&quot;声明变量时不同的内存分配&quot;&gt;&lt;/a&gt;声明变量时不同的内存分配&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在&lt;strong&gt;变量访问的位置&lt;/strong&gt;。这是因为这些原始类型占据的空间是固定的，所以可将他们存储在较小的内存区域 - 栈中。这样存储便于迅速查寻变量的值。&lt;/li&gt;
-&lt;li&gt;引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存地址。这是因为：引用值的大小会改变，所以不能把它放在栈中，否则会降低变量查寻的速度。相反，放在变量的栈空间中的值是该对象存储在堆中的地址。地址的大小是固定的，所以把它存储在栈中对变量性能无任何负面影响。&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
@@ -259,12 +268,12 @@
     <link href="http://yoursite.com/2014/11/02/pseudo-element/"/>
     <id>http://yoursite.com/2014/11/02/pseudo-element/</id>
     <published>2014-11-02T04:24:23.000Z</published>
-    <updated>2017-05-24T14:55:25.000Z</updated>
+    <updated>2017-06-06T06:09:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p>或许你在很多网页的源码上已经不止一次的见过:before 和 :after了，或者是别人利用伪元素做出各种酷炫效果..看见它俩陌生的面孔是不是有些害怕但又很想征服它们运用在自己的项目中呢？希望读完本篇文章后你就可以和它俩混熟了~</p>
+    <content type="html"><![CDATA[<p>或许你在很多网页的源码上已经不止一次的见过:before 和 :after了，或者是别人利用伪元素做出各种酷炫效果..看见它俩陌生的面孔是不是有些害怕但又很想征服它们运用在自己的项目中呢？希望读完本篇文章后你就可以和它俩混熟了~<br><a id="more"></a></p>
 <p>在学会使用伪元素之前，先来了解一下什么是伪元素以及它们的工作原理。</p>
 <p>很多时候我们希望实现某种效果或是完成某些工作，但是又不希望破坏HTML的语义化，增加一个标签仅仅是为了去达成我们的目的却和结构完全没关系，一名优秀的前端工程师是绝对不会这么干的。那么这个时候，伪元素就该闪亮登场了~ </p>
-<p>首先还是让我们来看看官方对伪元素的定义吧: <a href="http://www.w3.org/TR/selectors/#pseudo-elements" target="_blank" rel="external"><strong>Pseudo-elements</strong></a><br><a id="more"></a></p>
+<p>首先还是让我们来看看官方对伪元素的定义吧: <a href="http://www.w3.org/TR/selectors/#pseudo-elements" target="_blank" rel="external"><strong>Pseudo-elements</strong></a> </p>
 <p>额，为了照顾看见英文就头疼的同学，我尽力翻译一下吧：</p>
 <p>“伪元素在标记语言创建的DOM树之外创造了一种抽象（的对象）。例如：标记语言并不提供可以直接控制元素中第一行内容或第一个字这样的机制，而伪元素就允许开发人员去特指这些无法触及的内容；伪元素也提供了开发人员一种方法，可以特指一些原本在源文档（Dom树）中并不存在的内容（例如：:before 和 :after可以<strong>创建</strong>内容）。”</p>
 <p><strong>tip</strong>:关于双冒号还是单冒号的问题，双冒号::是CSS3的新语法，为了区分伪类和伪元素，但是IE8不兼容双冒号语法，所以如果要考虑到兼容IE建议使用单冒号，否则应当遵循最新规范的双冒号语法。</p>
@@ -300,10 +309,7 @@ p:after{
     
     <summary type="html">
     
-      &lt;p&gt;或许你在很多网页的源码上已经不止一次的见过:before 和 :after了，或者是别人利用伪元素做出各种酷炫效果..看见它俩陌生的面孔是不是有些害怕但又很想征服它们运用在自己的项目中呢？希望读完本篇文章后你就可以和它俩混熟了~&lt;/p&gt;
-&lt;p&gt;在学会使用伪元素之前，先来了解一下什么是伪元素以及它们的工作原理。&lt;/p&gt;
-&lt;p&gt;很多时候我们希望实现某种效果或是完成某些工作，但是又不希望破坏HTML的语义化，增加一个标签仅仅是为了去达成我们的目的却和结构完全没关系，一名优秀的前端工程师是绝对不会这么干的。那么这个时候，伪元素就该闪亮登场了~ &lt;/p&gt;
-&lt;p&gt;首先还是让我们来看看官方对伪元素的定义吧: &lt;a href=&quot;http://www.w3.org/TR/selectors/#pseudo-elements&quot;&gt;&lt;strong&gt;Pseudo-elements&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;
+      &lt;p&gt;或许你在很多网页的源码上已经不止一次的见过:before 和 :after了，或者是别人利用伪元素做出各种酷炫效果..看见它俩陌生的面孔是不是有些害怕但又很想征服它们运用在自己的项目中呢？希望读完本篇文章后你就可以和它俩混熟了~&lt;br&gt;
     
     </summary>
     
