@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-06T06:41:50.000Z</updated>
+  <updated>2017-06-06T07:23:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,17 @@
     <link href="http://yoursite.com/2017/06/06/flag/"/>
     <id>http://yoursite.com/2017/06/06/flag/</id>
     <published>2017-06-06T06:21:28.000Z</published>
-    <updated>2017-06-06T06:41:50.000Z</updated>
+    <updated>2017-06-06T07:23:44.000Z</updated>
     
-    <content type="html"><![CDATA[<p>距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。<br>希望这篇文章不会成为 flag 😶<br><img src="http://s3.mogucdn.com/mlcdn/c45406/170606_0a2akh4ak28bi240gicl0edhgffjf_5616x2905.jpg" alt="image"></p>
+    <content type="html"><![CDATA[<img src="http://s2.mogucdn.com/mlcdn/c45406/170606_10b5596la74gkejc0kgdl6j46fi5e_700x694.jpg" class="kumamon" width="200" height="200">
+<p>距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。<br>希望这篇文章不会成为 flag 😶</p>
+<a id="more"></a>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。&lt;br&gt;希望这篇文章不会成为 flag 😶&lt;br&gt;&lt;img src=&quot;http://s3.mogucdn.com/
+      &lt;img src=&quot;http://s2.mogucdn.com/mlcdn/c45406/170606_10b5596la74gkejc0kgdl6j46fi5e_700x694.jpg&quot; class=&quot;kumamon&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;p&gt;距离上次写博客…一不小心就两年了🌝 总是以懒为借口随便记在 Bear 一类的记事本上。最近深刻反省了一下自己，其中一个行动是重拾博客，坚持思考、记录、分享。&lt;br&gt;希望这篇文章不会成为 flag 😶&lt;/p&gt;
     
     </summary>
     
@@ -116,11 +119,11 @@
     <link href="http://yoursite.com/2015/03/19/javascript-the-core-ec-ecs-ao-vo/"/>
     <id>http://yoursite.com/2015/03/19/javascript-the-core-ec-ecs-ao-vo/</id>
     <published>2015-03-18T23:39:25.000Z</published>
-    <updated>2017-06-06T06:08:47.000Z</updated>
+    <updated>2017-06-06T06:50:24.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p><span class="s1">之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。</span></p>
+    <content type="html"><![CDATA[<p>之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。</p>
 <a id="more"></a>
-<p><span class="s1">注：Execution Context 可以被翻译为「执行上下文」或者「 执行环境」，文中可能都会用到，大家记住是一个东西就可以了。</span></p>
+<p>注：Execution Context 可以被翻译为「执行上下文」或者「 执行环境」，文中可能都会用到，大家记住是一个东西就可以了。</p>
 <h2 id="什么是执行环境（Execution-Context）？"><a href="#什么是执行环境（Execution-Context）？" class="headerlink" title="什么是执行环境（Execution Context）？"></a><strong>什么是执行环境（Execution Context）？</strong></h2><p><em>“每当程序的执行流进入到一个可执行的代码时，就进入到了一个<strong>执行环境</strong>中。”</em></p>
 <p>执行环境是 ECMA-262 中用以区分不同的可执行代码的抽象概念<br>可执行代码的类型可以为分为：</p>
 <ul>
@@ -199,7 +202,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;span class=&quot;s1&quot;&gt;之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;之前在阅读《Javascript高级程序设计》「4.2执行环境及作用域的」时候，对相关的概念理解得并不是非常的透彻，只是懂了大概的意思。后来在看到「闭包」这一节时书中再一次提到了相关的概念，并且这些是充分理解闭包的必要背景知识，于是这一次我不能再略读了，必须彻彻底底地弄明白。啃了两天的相关文章、资料后，算是有一个比较清晰的认识了，现在记录下来，希望可以帮到同样对相关概念不熟悉的同学，也可以用作自己日后的回顾和修正。&lt;/p&gt;
     
     </summary>
     
