@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 什么是伪元素:after和:before · okiilemon's blog</title><meta name="description" content="什么是伪元素:after和:before - okiilemon"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="okiilemon's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">文章列表</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">什么是伪元素:after和:before</h1><div class="post-info">2014年11月2日</div><div class="post-content"><p>或许你在很多网页的源码上已经不止一次的见过:before 和 :after了，或者是别人利用伪元素做出各种酷炫效果..看见它俩陌生的面孔是不是有些害怕但又很想征服它们运用在自己的项目中呢？希望读完本篇文章后你就可以和它俩混熟了~</p>
+<p>在学会使用伪元素之前，先来了解一下什么是伪元素以及它们的工作原理。</p>
+<p>很多时候我们希望实现某种效果或是完成某些工作，但是又不希望破坏HTML的语义化，增加一个标签仅仅是为了去达成我们的目的却和结构完全没关系，一名优秀的前端工程师是绝对不会这么干的。那么这个时候，伪元素就该闪亮登场了~ </p>
+<p>首先还是让我们来看看官方对伪元素的定义吧: <a href="http://www.w3.org/TR/selectors/#pseudo-elements" target="_blank" rel="external"><strong>Pseudo-elements</strong></a><br><a id="more"></a></p>
+<p>额，为了照顾看见英文就头疼的同学，我尽力翻译一下吧：</p>
+<p>“伪元素在标记语言创建的DOM树之外创造了一种抽象（的对象）。例如：标记语言并不提供可以直接控制元素中第一行内容或第一个字这样的机制，而伪元素就允许开发人员去特指这些无法触及的内容；伪元素也提供了开发人员一种方法，可以特指一些原本在源文档（Dom树）中并不存在的内容（例如：:before 和 :after可以<strong>创建</strong>内容）。”</p>
+<p><strong>tip</strong>:关于双冒号还是单冒号的问题，双冒号::是CSS3的新语法，为了区分伪类和伪元素，但是IE8不兼容双冒号语法，所以如果要考虑到兼容IE建议使用单冒号，否则应当遵循最新规范的双冒号语法。</p>
+<p>具体用法：</p>
+<p>还是举个栗子最直观</p>
+<pre class="lang:css decode:true ">&lt;p&gt;Today is a fine day&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;before&gt; Yes &lt;/before&gt;
+   Today is a fine day
+  &lt;after&gt;  No  &lt;/after&gt;
+&lt;/p&gt;</pre> 
+
+<p>上面3-7行的代码是以下CSS转换成标记语言的等同效果</p>
+<pre class="lang:css decode:true ">p:before{
+  content:"Yes";
+}
+
+p:after{
+  content:"No";
+}</pre> 
+
+<p>也就是说，:before是在元素的内容之前插入/创建一个虚拟的元素，:after 是在元素的内容之后插入/创建一个虚拟的元素 （我是这么理解的：相当于插入一个first-child和last-child,如果这么理解不恰当，请指出~）</p>
+<p>其中，content属性是必须声明的，它的值可以是：</p>
+<p>1.字符串：eg. content:”abcd”;<br>2.图片：eg. content:url(…);<br>  注：图片会按实际尺寸插入并且无法改变其大小。<br>3.空：eg. content:” “;<br>  感觉这个用途是最广泛的，可以发挥你的想象让这个空胜于有。比如可以设为空然后给伪元素设置背景图像，这样就可以修改图片的大小了。<br>4.计数器：eg. content: counter(li); 在列表时计算行数非常方便。</p>
+<p><strong>tip:</strong>伪元素默认生成的是一个<strong>内联元素</strong>，可以根据需要设置display:block;</p>
+<p>浏览器支持情况：</p>
+<p>1.Firefox 3.5- 不支持伪元素的绝对定位。<br>2.Opera 9.2里，伪元素里的空格会显示，如同在pre里一样。<br>3.IE 8 不支持伪元素里的z-index</p>
+<p>今天就介绍到这里，在下篇文章中将向大家展示一些伪元素的妙用和那些酷炫效果。</p>
+<p>文章参考：</p>
+<p><a href="http://www.tinghaige.com/understanding-pseudo-element-before-and-after.html" title="理解伪元素:Before和:After" target="_blank" rel="external">理解伪元素:Before和:After</a><br><a href="http://ithelp.ithome.com.tw/question/10128451" title="CSS沒有極限 - 別忘了偽元素" target="_blank" rel="external">CSS沒有極限 - 別忘了偽元素</a><br><a href="http://www.webhek.com/after-before/" title="伪元素::after和::before" target="_blank" rel="external">伪元素::after和::before</a></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2014/12/19/call-by-sharing/" class="prev">PREV</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://yoursite.com">okiilemon</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
